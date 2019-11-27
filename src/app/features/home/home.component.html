@@ -1,0 +1,22 @@
+<div>
+  <div class="row">
+    <div class="col-12">
+      <app-search [min]="deals?.minPrice" [max]="deals?.maxPrice" (search)="doSearch($event)"></app-search>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button nbButton ghost class="float-right" status="basic" (click)="openFavModal()">Favorites</button>
+      <app-sort (search)="sortBy($event)"></app-sort>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3" *ngFor="let deal of deals?.deals">
+      <app-deal-card (favorite)="addOrRemoveFavorite($event)" [deal]="deal"></app-deal-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  Loading stuff...
+</ng-template>

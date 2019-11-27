@@ -1,0 +1,24 @@
+<div class="row form-group">
+  <div class="col-sm-6 col-md-3">
+    <input nbInput (keydown.enter)="doSearch()" name="name" [(ngModel)]="deal.name"
+      placeholder="Search for deals name or Address" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"
+      class="form-control search-location" #search>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <nb-radio-group name="type" disabled [(ngModel)]="deal.type">
+      <nb-radio value="acquisition">Acquisition</nb-radio>
+      <nb-radio value="development">Development</nb-radio>
+      <nb-radio value="financing">Financing</nb-radio>
+      <nb-radio value="leasing">Leasing</nb-radio>
+    </nb-radio-group>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <input disabled [(ngModel)]="deal.dueDate" name="date" placeholder="Due to Date" autocorrect="off"
+      autocapitalize="off" spellcheck="off" type="text" class="form-control search-location"
+      [nbDatepicker]="datepicker">
+    <nb-datepicker #datepicker></nb-datepicker>
+  </div>
+</div>

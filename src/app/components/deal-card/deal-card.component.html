@@ -1,0 +1,58 @@
+<nb-flip-card>
+  <nb-card-front>
+    <nb-card>
+      <nb-card-body>
+        <button (click)="addOrRemoveFavorite(deal)" class="dealfavicon" nbButton ghost>
+          <nb-icon icon="heart-outline"></nb-icon>
+        </button>
+        <img class="dealImg"
+          src="https://www.tdworld.com/sites/tdworld.com/files/styles/article_featured_retina/public/buildings.jpg?itok=9XElKH1m" />
+        <p class="dealCardPrice">{{deal.price}} €</p>
+        <div class="row">
+          <div class="col-6">
+            {{deal.name}}
+          </div>
+          <div class="col-6">
+            <nb-icon icon="map-outline"></nb-icon> {{deal.address}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            {{deal.type}}
+          </div>
+          <div class="col-6">
+            <nb-icon icon="calendar-outline"></nb-icon> {{deal.dueDate}}
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card>
+      <nb-card-body>
+        <div class="row">
+          <div class="col-6">
+            <p>Characteristics</p>
+            <p>
+              <nb-icon icon="settings-2-outline"></nb-icon> 4 rooms
+            </p>
+            <p>
+              <nb-icon icon="square-outline"></nb-icon> 250 m2
+            </p>
+          </div>
+          <div class="col-6">
+            <p>Contact Info</p>
+            <p>
+              <nb-icon icon="at-outline"></nb-icon> info@at.com
+            </p>
+            <p>
+              <nb-icon icon="phone-outline"></nb-icon> +34 123456789
+            </p>
+          </div>
+        </div>
+
+
+      </nb-card-body>
+    </nb-card>
+  </nb-card-back>
+</nb-flip-card>

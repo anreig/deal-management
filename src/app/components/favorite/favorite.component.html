@@ -1,0 +1,14 @@
+<nb-card>
+  <nb-card-header>Favorites</nb-card-header>
+  <nb-card-body>
+    <nb-list>
+      <nb-list-item *ngFor="let fav of favorites">
+        {{ fav.name }} - {{ fav.price }} €
+      </nb-list-item>
+    </nb-list>
+    <span *ngIf="favorites.length === 0">No favorites</span>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton (click)="close()">Close Dialog</button>
+  </nb-card-footer>
+</nb-card>
