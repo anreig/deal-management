@@ -7,9 +7,8 @@ The technology stack used for this example, including libraries and tools are:
 - Angular 8
 - Nebular
 - Bootstrap
-- ngx5-slider
 - Visual Studio Code
-- Ionic generator
+- Angular cli
 
 ## Best practices and patterns applied
 
